@@ -1,5 +1,5 @@
-/* These Queries were done working Retail Data to answer the 4 question provided.
- The customers table had the key Customer_ID and Customer_Name
+/* Below are queries on retail data to answer questions around customer purchasing behavior and sales information.
+ The Customers table had the key Customer_ID and Customer_Name
  The Sales table had the key Customer_ID, and columns Tran_date, Item_ID, Reporting_Classification, and Total_USD
  The Items table had the key Item_ID, and columns Product_Line, Ithem_Type, and Item_Name */
 
@@ -7,7 +7,7 @@
 --SQL Questions:
 
 --Write a query to obtain Customer Name and total Revenues
-	SELECT c.Customer_Name, 
+SELECT c.Customer_Name, 
 SUM(s.Total_USD)AS total_revenue
 FROM `sales` AS s 
 JOIN `customers` AS c 
